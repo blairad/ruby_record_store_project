@@ -1,5 +1,7 @@
 require_relative('../db/sql_runner')
 
+require('pry')
+
 class Artist
 
   attr_reader :id

@@ -10,7 +10,7 @@ CREATE TABLE albums (
   id SERIAL8 PRIMARY KEY,
   title VARCHAR (255),
   stock INT8,
-  artist_id INT8 REFERENCES artists(id)
+  artist_id INT8 REFERENCES artists(id) ON DELETE CASCADE
 );
 CREATE TABLE stock (
   id SERIAL8 PRIMARY KEY,
