@@ -25,9 +25,12 @@ class Artist
     result = SQLRunner.run(sql, values)[0]["id"].to_i()
   end
 
-  def albums(
-    sql = "SELECT * albums
-    ()"
-  )
+  def self.all(
+    sql = "SELECT * FROM artists"
+    all_albums = SQLRunner.run(sql)
+    return self.map(all_albums)
+  end
 
+  def self.map_items(artist_data)
+  result = artist_data.map{|artist| Artist.new(artist)}
   end
