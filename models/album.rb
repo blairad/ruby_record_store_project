@@ -25,7 +25,7 @@ class Album
       $1, $2 , $3
     ) RETURNING id"
     values = [@title, @stock, @artist_id]
-    results = SQLRunner.run(sql, values)
+    results = SqlRunner.run(sql, values)
     @id = results[0]['id'].to_i
   end
 
@@ -40,17 +40,17 @@ class Album
       $1, $2, $3
     )WHERE id = $4"
     values = [@title, @stock, @artist_id, @id]
-    SQLRunner.run(sql, values)
+    SqlRunner.run(sql, values)
   end
 
   def self.delete_all()
     sql = "DELETE FROM albums"
-    SQLRunner.run(sql)
+    SqlRunner.run(sql)
   end
 
   def self.all()
     sql = "SELECT * FROM albums"
-    all_albums = SQLRunner.run(sql)
+    all_albums = SqlRunner.run(sql)
     return self.map_items(all_albums)
   end
 

@@ -18,6 +18,7 @@ artist1.save()
 artist2.save()
 
 
+
 album1 = Album.new({'title' => 'Spiderland', 'stock' => 5, 'artist_id' => artist1.id})
 album2 = Album.new({'title' => 'Los Angeles', 'stock' => 3, 'artist_id' => artist2.id})
 
@@ -28,8 +29,10 @@ album2.save()
 # artist2.name = "C Duncan"
 # artist2.update()
 
-album2.title = "1983"
-album2.update()
+# album2.title = "1983"
+# album2.update()
 
 # p Artist.all()
- p Album.all()
+# p Album.all()
+
+# artist1.delete()
