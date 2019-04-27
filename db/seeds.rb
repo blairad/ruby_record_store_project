@@ -36,3 +36,6 @@ album2.save()
 # p Album.all()
 
 # artist1.delete()
+
+# artist2.id()
+artist2.find(50)
