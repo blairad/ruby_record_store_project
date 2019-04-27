@@ -1,6 +1,6 @@
 require_relative('../db/sql_runner')
 
-require('pry')
+require('pry-byebug')
 
 class Artist
 
@@ -47,6 +47,8 @@ class Artist
     result = SqlRunner.run(sql, values)
     # artist = artist.new(result.first)
     return Artist.new(result.first)
+    binding.pry
+    nil
   end
 
   def self.all()
