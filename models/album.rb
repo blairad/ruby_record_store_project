@@ -5,13 +5,21 @@ require ('pry')
 class Album
 
   attr_reader :id, :artist_id
-  attr_accessor :title, :stock
+  attr_accessor :title, :quantity
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @title = options['title']
-    @stock = options['stock'].to_i
+    @quantity = options['quantity'].to_i
     @artist_id = options['artist_id'].to_i
+  end
+
+  def album_title()
+    return "#{@title}"
+  end
+
+  def total()
+    return @title + @quantity
   end
 
   def save()
