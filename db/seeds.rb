@@ -70,3 +70,7 @@ album13.save()
 
 # p Artist.find(artist2.id)
 # p Album.find(album1.id)
+
+# artist_name()
+# album_title()
+# total()
