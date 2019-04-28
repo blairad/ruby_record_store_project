@@ -54,6 +54,14 @@ class Album
     return self.map_items(all_albums)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM albums WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    albums = Album.new(result)
+    return albums
+  end
+
   def self.map_items(album_data)
     results = album_data.map {|album| Album.new(album)}
   end
