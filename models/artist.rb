@@ -41,15 +41,17 @@ class Artist
     SqlRunner.run(sql)
   end
 
-  # def self.find(id)
-  #   sql = "SELECT * FROM artists WHERE id = $1"
-  #   values = [id]
-  #   result = SqlRunner.run(sql, values)
-  #   # artist = artist.new(result.first)
-  #   return Artist.new(result.first)
-  #   binding.pry
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    # artist = artist.new(result.first)
+    artist = Artist.new(result)
+    return artist
+    # return Artist.new(result.first)
+    binding.pry
   #   nil
-  # end
+   end
 
   def self.all()
     sql = "SELECT * FROM artists"
