@@ -1,6 +1,0 @@
-require('sinatra')
-require('sinatra/contrib/all')
-require('pry')
-require_relative('../models/album.rb')
-require_relative('../models/artist.rb')
-also_reload( '../models/*' )
