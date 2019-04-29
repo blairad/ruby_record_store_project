@@ -5,12 +5,15 @@
     <th>Artist</th>
     <th></th>
     <th>Album(s)</th>
+    <th></th>
+    <th>Quantity</th>
   </tr>
   <% for artist in @artists %>
+
   <tr>
     <td><a href="/artist/<%= artist.id %>"><%= artist.name %></a></td>
-    <td></td>
-    <td></td> 
+    <td>|</td>
+    
   </tr>
   <% end %>
 </table>

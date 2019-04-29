@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('../models/album.rb')
 
 require('pry-byebug')
 
@@ -39,6 +40,13 @@ class Artist
     values = [@id]
     SqlRunner.run(sql, values)
   end
+
+  # def artists()
+  #   sql = "SELECT albums.* FROM albums INNER JOIN artists a ON artist.album_id = albums.id WHERE artists.artist_id = $1;"
+  #    values = [@id]
+  #    result = SqlRunner.run(sql, values)
+  #    return results.map {|artist| Artist.new(artist)}
+  # end
 
   def self.delete_all()
     sql = "DELETE FROM artists"

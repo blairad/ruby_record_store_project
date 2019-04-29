@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner')
+require_relative('../db/sql_runner')
+require_relative('../models/artist.rb')
 
 require ('pry')
 
@@ -26,13 +28,13 @@ class Album
     sql = "INSERT INTO albums
     (
       title,
-      stock,
+      quantity,
       artist_id
     ) VALUES
     (
       $1, $2 , $3
     ) RETURNING id"
-    values = [@title, @stock, @artist_id]
+    values = [@title, @quantity, @artist_id]
     results = SqlRunner.run(sql, values)
     @id = results[0]['id'].to_i
   end
@@ -41,13 +43,13 @@ class Album
     sql = "UPDATE albums SET
     (
       title,
-      stock,
+      quantity,
       artist_id
     ) =
     (
       $1, $2, $3
     )WHERE id = $4"
-    values = [@title, @stock, @artist_id, @id]
+    values = [@title, @quantity, @artist_id, @id]
     SqlRunner.run(sql, values)
   end
 

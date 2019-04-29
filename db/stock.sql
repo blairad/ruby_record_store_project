@@ -10,8 +10,8 @@ CREATE TABLE artists (
 CREATE TABLE albums (
   id SERIAL8 PRIMARY KEY,
   title VARCHAR (255),
-  stock INT8,
-  artist_id INT8 REFERENCES artists(id),
+  quantity INT8,
+  artist_id INT8 REFERENCES artists(id)
 );
 
 
