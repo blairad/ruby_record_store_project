@@ -16,13 +16,13 @@ class Album
     @artist_id = options['artist_id'].to_i
   end
 
-  # def album_title()
-  #   return "#{@title}"
-  # end
-  #
-  # def total()
-  #   return @title + @quantity
-  # end
+  def album_title()
+    return "#{@title}"
+  end
+
+  def total()
+    return @title + @quantity
+  end
 
   def save()
     sql = "INSERT INTO albums
