@@ -16,13 +16,13 @@ class Album
     @artist_id = options['artist_id'].to_i
   end
 
-  def album_title()
-    return "#{@title}"
-  end
-
-  def total()
-    return @title + @quantity
-  end
+  # def album_title()
+  #   return "#{@title}"
+  # end
+  #
+  # def total()
+  #   return @title + @quantity
+  # end
 
   def save()
     sql = "INSERT INTO albums
@@ -50,6 +50,12 @@ class Album
       $1, $2, $3
     )WHERE id = $4"
     values = [@title, @quantity, @artist_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def artists
+    sql = "SELECT * FROM artists"
+    values = [@artist_id]
     SqlRunner.run(sql, values)
   end
 
