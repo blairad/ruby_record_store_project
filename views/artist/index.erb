@@ -1,0 +1,8 @@
+<h1>All the artists?</h1>
+
+<% for artist in @artists %>
+
+  <p>Name: <%= artist.artist_name() %></p>
+  <p><a href="/artist/<%= artist.id %>">Show Artist</a></p>
+  <hr />
+<% end %>
