@@ -1,8 +1,16 @@
-<h1>All the artists?</h1>
+<h1>Artists</h1>
 
-<% for artist in @artists %>
-
-  <p>Name: <%= artist.artist_name() %></p>
-  <p><a href="/artist/<%= artist.id %>">Show Artist</a></p>
-  <hr />
-<% end %>
+<table>
+  <tr>
+    <th>Artist</th>
+    <th></th>
+    <th>Album(s)</th>
+  </tr>
+  <% for artist in @artists %>
+  <tr>
+    <td><a href="/artist/<%= artist.id %>"><%= artist.name %></a></td>
+    <td></td>
+    <td></td> 
+  </tr>
+  <% end %>
+</table>
