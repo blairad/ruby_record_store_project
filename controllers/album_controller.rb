@@ -6,6 +6,7 @@ require_relative('../models/artist.rb')
 also_reload( '../models/*' )
 
 
+
 # index
   get '/album' do
     @albums = Album.all

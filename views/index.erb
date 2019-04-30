@@ -3,7 +3,7 @@
 <p>list your records here</p>
 <% @albums.each do |album| %>
 <a href ='/artist/:id/' <p>Artist Name:</p> <%= album.artist_id %> </a>
-<p>Album Name: <%= album.title() %></p>
+<p>Album Name: <%= album.album_title %></p>
 <p>Quantity: <%= album.quantity %></p>
 
 <% end %>

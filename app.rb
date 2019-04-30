@@ -9,7 +9,13 @@ get '/' do
   erb( :index )
 end
 
-get '/artist/:id' do
-  @artists = Artist.find(params[:id])
-  erb(:'artist/show')
-end
+# get '/artist/:id' do
+#   @artist = Artist.find(params[:id])
+#   @albums = Album.all()
+#   erb(:'artist/show')
+# end
+
+# get '/album/:id' do
+#
+#   erb(:'album/show')
+# end

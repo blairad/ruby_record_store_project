@@ -12,13 +12,13 @@ also_reload( '../models/*' )
   end
 # new
   get '/artist/new' do
-    @artists = Artist.all
+    @artist = Artist.all
     erb(:new)
   end
 # show
   get '/artist/:id' do
-    @artists = Artist.find(params[:id])
-    erb(:show)
+    @artist = Artist.find(params[:id])
+    erb(:'artist/show')
   end
 # create
   post '/artist/create' do
@@ -28,7 +28,7 @@ also_reload( '../models/*' )
   end
 # edit
   get '/artist/:id/edit' do
-    @artists = Artist.find(params).update
+    @artist = Artist.find(params).update
     erb (:edit)
   end
 # update
