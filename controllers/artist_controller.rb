@@ -16,7 +16,7 @@ also_reload( '../models/*' )
     erb(:new)
   end
 # show
-  get 'artist/:id' do
+  get '/artist/:id' do
     @artists = Artist.find(params[:id])
     erb(:show)
   end

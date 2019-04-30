@@ -9,7 +9,7 @@ get '/' do
   erb( :index )
 end
 
-get 'artist/:id' do
+get '/artist/:id' do
   @artists = Artist.find(params[:id])
-  erb(:show)
+  erb(:'artist/show')
 end

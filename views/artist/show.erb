@@ -1,5 +1,8 @@
 <p>Artist Entry</p>
 
-<p>Artist Name: <%= @artist.name %></p>
-<p>Album Title: <%= @album.title %></p>
-<p>Quantity: <%= @album.quantity %></p>
+<% @albums.each do |album| %>
+<p>Artist Name: <%= @artists.name %></p>
+<p>Album Title: <%= @albums.title %></p>
+<p>Quantity: <%= albums.quantity %></p>
+
+<% end %>
