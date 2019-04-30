@@ -8,6 +8,7 @@ also_reload( '../models/*' )
 # index
   get '/artist' do
     @artists = Artist.all
+    @albums = Album.all
     erb(:"artist/index")
   end
 # new
@@ -23,6 +24,7 @@ also_reload( '../models/*' )
 # create
   post '/artist/create' do
   @artist = Artist.new(params).save
+  @albums = Album.new(params).save
   # @artist.save()
   erb (:create)
   end
