@@ -23,10 +23,9 @@ also_reload( '../models/*' )
   end
 # create
   post '/artist/create' do
-  @artist = Artist.new(params).save
-  @albums = Album.new(params).save
-  # @artist.save()
-  erb (:create)
+  artists = Artist.new(params)
+  artists.save()
+  erb (:'artist/create')
   end
 # edit
   get '/artist/:id/edit' do
