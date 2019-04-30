@@ -41,6 +41,12 @@ class Artist
     SqlRunner.run(sql, values)
   end
 
+  def albums
+    sql = "SELECT * FROM albums"
+    values = [@albums]
+    SqlRunner.run(sql, values)
+  end
+
   # def artists()
   #   sql = "SELECT albums.* FROM albums INNER JOIN artists a ON artist.album_id = albums.id WHERE artists.artist_id = $1;"
   #    values = [@id]

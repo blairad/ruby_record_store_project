@@ -5,7 +5,6 @@ require_relative('../models/album.rb')
 require_relative('../models/artist.rb')
 also_reload( '../models/*' )
 
-#why can't i use album_controller while in a controllers folder?
 
 # index
   get '/album' do

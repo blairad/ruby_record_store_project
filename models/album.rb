@@ -1,5 +1,4 @@
 require_relative('../db/sql_runner')
-require_relative('../db/sql_runner')
 require_relative('../models/artist.rb')
 
 require ('pry')
@@ -53,10 +52,14 @@ class Album
     SqlRunner.run(sql, values)
   end
 
-  def artists
-    sql = "SELECT * FROM artists"
+  def artists()
+    sql = "SELECT * FROM artists WHERE id = $1"
     values = [@artist_id]
-    SqlRunner.run(sql, values)
+    results = SqlRunner.run(sql, values)
+    list_artists = Artist.new(results)
+    binding.pry
+    nil
+    return list_artists
   end
 
   def self.delete_all()

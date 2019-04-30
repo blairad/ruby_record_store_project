@@ -10,20 +10,20 @@ also_reload( '../models/*' )
     @artists = Artist.all
     erb(:"artist/index")
   end
-# show
-  get '/artist/new' do
-    @artists = Artist.new
-    erb(:"artist/new")
-  end
 # new
+  get '/artist/new' do
+    @artists = Artist.all
+    erb(:new)
+  end
+# show
   get 'artist/:id' do
     @artists = Artist.find(params[:id])
     erb(:show)
   end
 # create
-  post '/artist' do
-  @artist = Artist.new(params)
-  @artist.save()
+  post '/artist/create' do
+  @artist = Artist.new(params).save
+  # @artist.save()
   erb (:create)
   end
 # edit
