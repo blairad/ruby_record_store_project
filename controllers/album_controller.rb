@@ -27,10 +27,10 @@ also_reload( '../models/*' )
   end
 
  # create
-  post '/album/' do
-  album = Album.new(params)
-  album.save()
-  erb (:create)
+  post '/album/create' do
+  @albums = Album.new(params)
+  @albums.save()
+  erb (:'album/create')
 end
 
 # edit
