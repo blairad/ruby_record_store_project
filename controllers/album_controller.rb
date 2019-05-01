@@ -31,7 +31,7 @@ also_reload( '../models/*' )
   @albums = Album.new(params)
   @albums.save()
   erb (:'album/create')
-end
+  end
 
 # edit
   get '/album/:id/edit' do
@@ -39,13 +39,13 @@ end
     erb (:edit)
   end
 # update
-post '/album/:id' do
-  Album.new( params ).update
-  redirect to '/album'
-end
+  post '/album/:id' do
+    Album.new( params ).update
+    redirect to '/album'
+  end
 # destroy
-post '/album/:id/delete' do
-  album = Album.find( params[:id] )
-  album.delete()
-  redirect to '/album'
-end
+  post '/album/:id/delete' do
+    album = Album.find( params[:id] )
+    album.delete()
+    redirect to '/album'
+  end

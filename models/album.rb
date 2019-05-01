@@ -30,6 +30,7 @@ class Album
       return "high"
     else
       return "mid"
+    end
   end
 
   def save()
@@ -69,6 +70,12 @@ class Album
     # binding.pry
     # nil
     return list_artists
+  end
+
+  def delete()
+    sql = "DELETE FROM albums WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
   def self.delete_all()
