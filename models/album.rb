@@ -23,6 +23,15 @@ class Album
     return @title + @quantity
   end
 
+  def check_quantity()
+    if quantity <= 3
+      return "low"
+    elsif quantity >= 7
+      return "high"
+    else
+      return "mid"
+  end
+
   def save()
     sql = "INSERT INTO albums
     (
