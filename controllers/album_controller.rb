@@ -17,6 +17,7 @@ also_reload( '../models/*' )
 # new
   get '/album/new' do
     @albums = Album.all
+    @artist = Artist.all
     erb(:"album/new")
   end
 

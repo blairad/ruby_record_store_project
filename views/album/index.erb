@@ -5,7 +5,7 @@
 <ul>
 
   <li>
-  <p>Title: <%= album.album_title() %></p>
+  <p>Title: <%= album.album_title() %> <br> Quantity: <%= album.quantity() %></p>
 
   <form action="album/<%= album.id %>/delete" method="post">
   <input type="submit" value="delete">
