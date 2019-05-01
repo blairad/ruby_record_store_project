@@ -11,6 +11,7 @@
   <tr>
     <td><a href="/artist/<%= artist.id %>"><%= artist.name %></a></td>
     <td>|</td>
+
     <td>|</td>
   </tr>
   <% end %>
@@ -26,10 +27,4 @@
 
 <form action="/artist/edit">
   <input type="submit" value="Edit Artist">
-</form>
-
-<br>
-
-<form action="artist/delete">
-  <input type="submit" value="Delete Artist">
 </form>

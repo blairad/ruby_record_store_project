@@ -1,9 +1,21 @@
 <h1>Album list</h1>
 
 <% for album in @albums %>
+<ul>
 
 
+  <li>
   <p>Title: <%= album.album_title() %></p>
 
 
+    <form action="album/<%= album.id %>/delete" method="post">
+    <input type="button" type="submit" value="delete">
+
+  </form>
+
+
+
+  </li>
+
 <% end %>
+</ul>

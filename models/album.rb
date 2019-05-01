@@ -66,8 +66,8 @@ class Album
     values = [@artist_id]
     results = SqlRunner.run(sql, values)
     list_artists = Artist.new(results)
-    binding.pry
-    nil
+    # binding.pry
+    # nil
     return list_artists
   end
 
