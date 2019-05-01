@@ -1,16 +1,18 @@
-<h2>Artist Entry<h2>
+<h1>Artist Entry<h1>
 
   <form action="/album/new" >
   <input type="submit" value="Add album">
 
 
   </form>
+<div class="artist-entry">
 
-<p>Artist Name: <%= @artist.name %></p>
 
-<ol>
-  <% for album in @artist.albums %>
-  <li>Title: <%= album.album_title %> <br> Quantity: <%= album.quantity %></li>
+  <p>Artist Name: <%= @artist.name %></p>
+    <ol>
+      <% for album in @artist.albums %>
+      <li>Title: <%= album.album_title %> <br> Quantity: <%= album.quantity %></li>
 
-  <% end %>
-</ol>
+      <% end %>
+    </ol>
+</div>
