@@ -4,15 +4,23 @@
   <head>
     <meta charset="utf-8">
     <title>Album Inventory</title>
-
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <nav id="menu">
-    <li class="menu-item"><a href='/'>Home</a></li>
-    <li class="menu-item"><a href='/artist'>Artist</a></li>
-    <li class="menu-item"><a href='/album'>Albums</a></li>
-    </nav>
 
+  <div class="containter">
+    <div class="header">
+      <div class="nav">
+
+        <nav id="menu">
+          <li class="menu-item"><a href='/'>Home</a></li>
+          <li class="menu-item"><a href='/artist'>Artist</a></li>
+          <li class="menu-item"><a href='/album'>Albums</a></li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
     <%= yield %>
   </body>
 </html>

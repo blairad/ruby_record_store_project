@@ -28,10 +28,10 @@ also_reload( '../models/*' )
   end
 
  # create
-  post '/album/create' do
+  post '/album/new' do
   @albums = Album.new(params)
   @albums.save()
-  erb (:'album/create')
+  redirect to '/album'
   end
 
 # edit

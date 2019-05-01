@@ -14,7 +14,7 @@ also_reload( '../models/*' )
 # new
   get '/artist/new' do
     @artist = Artist.all
-    erb(:new)
+    erb(:'artist/new')
   end
 # show
   get '/artist/:id' do
