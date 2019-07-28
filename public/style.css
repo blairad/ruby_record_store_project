@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  text-decoration: Helvetica;
+  background-image: url("/glorious-vinyl-records-packing-crates-in-a-record-store.jpg");
+}
+.header {
+  background-color: #D9846D;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #333;
+}
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.album {
+  float: inherit;
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+  list-style-type: none;
+}
+.artist-entry{
+  text-align: center;
+  font-family: sans-serif;
+  color: #A88264;
+  text-decoration: none;
+}
+a{
+  color: #A88264;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+h1{
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-family: sans-serif;
+  color: #A88264;
+}
+
+p{
+  color: #212E71;
+  font-size: 15px;
+  font-family: Gill Sans, serif;
+}
+
+ul a{
+  color: #f2f2f2;
+  vertical-align: top;
+  color: #A88264;
+  text-decoration: none;
+  list-style-type: none;
+}
+ol {
+  color: #0F1A55;
+  list-style-type: none;
+}
+li {
+  text-decoration: none;
+}
+input[type=text]{
+  color: #0F1A55;
+}
