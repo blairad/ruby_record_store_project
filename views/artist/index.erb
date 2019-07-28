@@ -17,4 +17,9 @@
 
 <form action="/artist/new">
   <input type="submit" value="Add Artist">
+
+</form>
+
+<form action="artist/<%= artist.id %>/delete" method="post">
+  <input type="submit" value="delete">
 </form>

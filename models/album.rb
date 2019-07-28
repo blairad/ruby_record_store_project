@@ -23,6 +23,15 @@ class Album
     return @title + @quantity
   end
 
+# this is a function that checks an albums quantity
+# 
+# if the album has three or fewer albums
+# return low
+# else if an album has seven or more albums
+# return high
+# else
+# return mid
+
   def check_quantity()
     if quantity <= 3
       return "low"
